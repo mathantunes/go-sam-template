@@ -1,0 +1,26 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  serverless
+  
+  Sample SAM Template for serverless
+Globals:
+  Function:
+    Timeout: 5
+Resources:
+  ServiceFuncion:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: app/lambdaService
+      Handler: lambdaService
+      Runtime: go1.x
+      Tracing: Active
+      Events:
+        CatchAll:
+          Type: Api
+          Properties:
+            Path: /get
+            Method: GET
+      Environment:
+        Variables:
+          PARAM1: VALUE
