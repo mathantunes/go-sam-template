@@ -1,6 +1,8 @@
 # go-sam-template
 
-## This repo can be used as a guideline for developing golang SAM projects with a DDD approach to serverless
+## This repo can be used as a guideline for developing golang SAM projects with a DDD approach to serverless.
+
+It implements pretty much a non-sense service that if deployed on AWS will generate a lambda function and an API gateway with a get method.
 
 ### App
 
@@ -33,3 +35,12 @@ Define all interfaces to be implemented by each service
 ##### infra/***
 
 Implement infrasctructure layer based on the interfaces defines on contracts
+
+### TODOS
+
+Service triggered by S3
+Service triggered by DynamoDB
+Service triggered by SQS
+API Gateway configuration example
+Service triggered by API Gateway with CORS
+Service triggered by API Gateway with post method and body
