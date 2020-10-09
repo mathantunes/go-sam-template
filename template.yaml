@@ -16,7 +16,7 @@ Resources:
       Runtime: go1.x
       Tracing: Active
       Events:
-        CatchAll:
+        ServiceEvent1:
           Type: Api
           Properties:
             Path: /get
